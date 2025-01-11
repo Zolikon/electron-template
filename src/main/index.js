@@ -1,8 +1,8 @@
 import { app, BrowserWindow, ipcMain } from 'electron'
-import {  optimizer } from '@electron-toolkit/utils'
+import { optimizer } from '@electron-toolkit/utils'
 import { createWindow } from './utils'
 
-let mainWindow;
+let mainWindow
 
 app.whenReady().then(() => {
   mainWindow = createWindow()
@@ -11,7 +11,9 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window)
   })
 
-  ipcMain.on('ping', () => {mainWindow.send('pong')})
+  ipcMain.on('ping', () => {
+    mainWindow.send('pong')
+  })
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()

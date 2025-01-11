@@ -1,4 +1,4 @@
-import { shell} from 'electron'
+import { shell } from 'electron'
 import { Window } from './Window'
 import { is } from '@electron-toolkit/utils'
 
@@ -19,5 +19,5 @@ export function createWindow() {
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
-  return mainWindow;
+  return mainWindow
 }

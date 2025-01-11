@@ -8,8 +8,8 @@ export class Window extends BrowserWindow {
       show: false,
       webPreferences: {
         preload: `${__dirname}/../preload/index.js`,
-        sandbox: false
-      }
+        sandbox: false,
+      },
     })
     this.loadFile(`${__dirname}/src/renderer/index.html`)
   }
