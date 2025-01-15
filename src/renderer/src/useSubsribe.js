@@ -18,5 +18,5 @@ export function useSubscribe(message, onEventTriggered, once = false) {
     return () => {
       eventBus.removeListener(message, completedListener);
     };
-  }, [eventBus]);
+  }, []);
 }
